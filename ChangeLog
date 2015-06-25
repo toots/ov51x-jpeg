@@ -1,0 +1,105 @@
+ChangeLog 
+
+28/09/2008 - 1.5.9:
+	* Added support for kernels >= 2.6.27
+	  Thanks to Sergio Visinoni for writing a
+          patch, and all the users for testing and 
+          reporting.
+
+23/06/2008 - 1.5.8:
+	* Added support for kernels >= 2.6.26
+	  Thanks to Armando Basile for reporting and fixing !
+
+02/04/2008 - 1.5.7:
+	* Added support for another VF0350 Live ! Camera
+	  Thanks to Spaceman Spiff for reporting
+	* Fixed LED on Live! webcams. Still needs some work.
+	  Thanks to Bartlomiej Celary for reporting and patching
+
+11/02/2008 - 1.5.6:
+	* Added support for VF0470 Live! Cam Notebook
+	  Thanks to Axel for reporting
+	* Added support for Live! Cam Notebook Pro
+	  Thanks to Jean Schurger for reporting
+	* Added unblocking workaroudn for various applications
+	  Contributed by SebTV on skype forums.
+	  As he says, this a workaround, but light enough to worth being
+	  applied..
+	Refs:
+	  http://forum.skype.com/index.php?s=&showtopic=100897&view=findpost&p=465545
+
+26/01/2008 - 1.5.5:
+	* Fixed compilation with 2.6.24 kernels.
+	  Thanks to Klinski Mirko
+	* Fixed compilation when compat ioctl is not available.
+	  Thanks to Marco Cammarata
+
+08/12/2007 - 1.5.4:
+	* Added support for Creative Live! Cam VF0350 
+	  By Martin Laberge.
+	* Made ov51x-jpeg work in 32 bit userland on a 64 bit kernel
+	  Thanks to Thomas Bächler
+
+01/11/2007 - 1.5.3:
+        * Added support for Creative Vista Webcam VF0420
+	  Thanks to Julius Pfrommer
+	* Another try to fix the regression which prevents webcams
+	  to be initialized if plugged through a usb hub..
+	* Fixed complation warning, thanks to Laszlo Kajan
+
+21/07/2007 - 1.5.2:
+        * Added support for Creative Vista Webcam VF0330
+
+25/05/2007 - 1.5.1:
+        * Reverted nasty i2c changes since 0.5.4
+	* Cleaned up version string
+
+30/04/2007 - 1.5.0:
+	* Changed unused jpeginfo parameter in favour of
+	  dumpjpeg which allow dumpix raw JPEG frames
+	* Added test/getjpeg application which allows to
+	  dump raw JPEG frames to file.
+	* Added support for Creative IM Live ! webcams
+	  Many thanks to Matt Reeve and Sam Skipsey for, respectively,
+	  setting up a test machine and merging kernel's ov7670 driver
+	  into the module !
+	* Added back /proc interface, can be located at /proc/ov51x-jpeg
+	* Hacked a snapshot buton suport for ov519, ov518 owner should contact
+	  us to get this to work too...
+
+15/03/2007 - 1.0.0:
+	* Dropped support for kernels <= 2.6.18
+	* Merged decompression code into main module
+	* Renamed main module to ov51x-jpeg
+
+28/09/2006 - 0.5.4:
+	* Added support for 2.6.18 kernel.
+
+04/05/2006 - 0.5.3:
+	* Reactivated unit_video parameter that was badly removed from last release..
+	Thanks to Theodoros V. Kalamatianos for reporting and patching!!
+
+27/04/2006 - 0.5.2:
+	* Added a work around for MODULE_PARM being deprecated. Thanks to  
+	Kovács András and Kwa29 for reporting and debugging.
+
+24/03/2006 - 0.5.1:
+	* Added support for kernel >= 2.6.16, thanks to Ronny Prinse and
+	Kovács András for pointing this.
+
+19/09/2005 - 0.5:
+	Markus Tavenrath:
+	* Fixed corrupted lines at begining of frame
+	* Fixed wrong infromation returned by get_frame_length
+
+28/08/2005 - 0.4:
+	* Better software downsizing, more than a dirty hack this time! Big
+	big thanks to Stuart R. Harper!!
+
+25/07/2005 - 0.3: 
+	* Added software downsizing!
+	* Corrected make file to allow proper install for 2.6 kernels with 2.6.xx.xx-foo names.
+
+16/06/2005 - 0.2: fixed an incorrect makefile for kernels 2.4, thanks to MurDok
+
+13/05/2005 - 0.1: first public release. 
